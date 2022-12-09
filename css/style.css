@@ -1,14 +1,15 @@
 :root {
     --line-color: #111;
     --background-color: #eee;
-    --button-color: #aaa;
+    --background-2-color: #aaa;
+    --button-color: #777;
     --active-color: #aae;
     --nav-color: #55E;
 }
 * {box-sizing: border-box;}
 body {
     margin: 0;
-    background-color: var(--background-color);
+    background-color: var(--background-2-color);
     color: var(--line-color);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,9 +18,7 @@ a {color: inherit;}
     cursor: pointer;
     background-color: var(--button-color);
 }
-.button:hover {
-    background-color: var(--active-color);
-}
+.button:hover {background-color: var(--active-color);}
 
 .topbar {
     display: flex;
@@ -36,9 +35,7 @@ a {color: inherit;}
     width: 10rem;
     height: 100%;
 }
-.logo-img {
-    width: 3rem;
-}
+.logo-img {width: 3rem;}
 .logo-txt {
     margin: 0.5rem;
     font-weight: bold;
@@ -57,9 +54,13 @@ a {color: inherit;}
 .menu {
     display: none;
     position: fixed;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-evenly;
+
     top: 5rem;
     right: 0;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     font-size: 1.5rem;
     border-bottom-left-radius: 1rem;
     background-color: var(--background-color);
@@ -68,7 +69,7 @@ a {color: inherit;}
 }
 .desk-menu {display: none;}
 #menu-toggle {display: none;}
-#menu-toggle:checked ~ .menu {display: block;}
+#menu-toggle:checked ~ .menu {display: flex;}
 
 main {
     display: flex;
@@ -90,7 +91,7 @@ img {
 }
 .topic {
     position: relative;
-    display: inline-block;
+    cursor: pointer;
 }
 .topic-field {
     position: absolute;
@@ -101,10 +102,10 @@ img {
     top: 50%;
     padding: 1.5rem;
     border-radius: 0 0.5rem 0.5rem 0;
+    color: white;
 }
 .topic-txt {
     margin: 0;
-    color: white;
 }
 .topic-arrow {
     bottom: 1rem;
@@ -141,8 +142,34 @@ img {
     transform: rotate(180deg);
     color: gray;
 }
+.homepage-nav-tile-container {
+    width: 100%;
+    padding-top: 0.25rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: black;
+}
+.nav-tile-img {
+    height: 15rem;
+}
 
-
+.page-bottom {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 2rem 3rem;
+    background-color: var(--background-color);
+    gap: 0.5rem;
+}
+.bottom-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.bottom-panel p {
+    margin: 0;
+}
 
 
 
