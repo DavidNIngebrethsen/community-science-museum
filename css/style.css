@@ -75,6 +75,7 @@ main {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+    gap: 1rem;
 }
 img {
     width: 100%;
@@ -120,7 +121,9 @@ img {
 }
 
 .homepage-article {
-    display: none;
+    display: none;  
+}
+.article {
     border: 2px solid black;
     margin: 0.5rem;
     padding: 0 1rem 1rem;
