@@ -142,12 +142,17 @@ img {
     gap: 1rem;
     margin: 1rem;
 }
+.explore-block {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
 .explore {
-    float: right;
     padding: 0 1rem;
     background-color: var(--nav-color);
     color: white;
     border-radius: 1rem;
+    border: 2px solid var(--line-color);
 }
 #homepage-article-toggle {display: none;}
 #homepage-article-toggle:checked ~ .homepage-article {
